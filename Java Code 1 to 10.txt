@@ -1,0 +1,370 @@
+Program.1
+
+import java.util.Scanner;
+public class Calculator {
+   public static void main(String[] args) {
+      double num1;
+      double num2;
+      double ans;
+      char op;
+      Scanner reader = new Scanner(System.in);
+      System.out.print("Enter two numbers: ");
+      num1 = reader.nextDouble();
+      num2 = reader.nextDouble();
+      System.out.print("\nEnter an operator (+, -, *, /): ");
+      op = reader.next().charAt(0);
+      switch(op) {
+         case '+': ans = num1 + num2;
+            break;
+         case '-': ans = num1 - num2;
+            break;
+         case '*': ans = num1 * num2;
+            break;
+         case '/': ans = num1 / num2;
+            break;
+      default: System.out.printf("Error! Enter correct operator");
+         return;
+      }
+      System.out.print("\nThe result is given as follows:\n");
+      System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
+   }
+}
+
+
+Program.2
+
+package crunchify.com.tutorials;
+ 
+import java.util.Scanner;
+ 
+public class CrunchifyFibonacciOption3 {
+	public static void main(String args[]) {
+		
+		System.out.println("Enter the term to be printed");
+		Scanner ob = new Scanner(System.in);
+		int ch = ob.nextInt();
+		System.out.println("The" + ch + " terms of fibanocci numbers are-");
+		int a, b, s, n;
+		a = b = 1;
+		for (n = 1; n <= ch; n++) {
+			System.out.println(a);
+			s = a + b;
+			a = b;
+			b = s;
+		}
+	}
+}
+
+
+Program.3
+
+import java.util.*;
+public class Main
+{
+     public static void main(String []args)
+     {
+        //Take input from the user
+        //Create an instance of the Scanner Class
+        Scanner sc=new Scanner(System.in);
+        //Declare and Initialize the variable
+        System.out.println("Enter the number: ");
+        int num=sc.nextInt();
+        int i=1,fact=1;
+        while(i<=num)
+        {
+            fact=fact*i;
+            i++;
+        }
+        System.out.println("Factorial of the number: "+fact);  
+     }   
+}
+
+
+Program.4
+// Main class
+class GFG {
+ 
+    // Method 1
+    // Returns true if string is a palindrome
+    static boolean isPalindrome(String str)
+    {
+ 
+        // Pointers pointing to the beginning
+        // and the end of the string
+        int i = 0, j = str.length() - 1;
+ 
+        // While there are characters to compare
+        while (i < j) {
+ 
+            // If there is a mismatch
+            if (str.charAt(i) != str.charAt(j))
+                return false;
+ 
+            // Increment first pointer and
+            // decrement the other
+            i++;
+            j--;
+        }
+ 
+        // Given string is a palindrome
+        return true;
+    }
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+        String str = "geeks";
+        String str2 = "RACEcar";
+       
+        //Change strings to lowercase
+        str = str.toLowerCase();
+        str2 = str2.toLowerCase();
+ 
+        // For string 1
+        System.out.print("String 1 :");
+ 
+        if (isPalindrome(str))
+            System.out.print("It is a palindrome");
+        else
+            System.out.print("It is not a palindrome");
+ 
+        // new line for better readability
+        System.out.println();
+ 
+        // For string 2
+        System.out.print("String 2 :");
+        if (isPalindrome(str2))
+            System.out.print("It is a palindrome");
+        else
+            System.out.print("It is not a palindrome");
+    }
+}
+
+
+Program.5
+
+import java.util.Scanner;
+
+public class KboatPermutationCombination
+{
+    static long factorial(int num) {
+        int f = 1;
+        for (int i = 1; i <= num; i++) {
+            f *= i;
+        }
+        return f;
+    }
+    
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the value of n: ");
+        int n = in.nextInt();
+        System.out.print("Enter the value of r: ");
+        int r = in.nextInt();
+        int p = (int)(factorial(n) / factorial(n - r));
+        int c = (int)(factorial(n) 
+                      / (factorial(n - r) * factorial(r)));
+        System.out.println("Permutation = " + p);
+        System.out.println("Combination = " + c);
+    }
+}
+
+
+Program.6
+
+import java.util.Scanner;
+public class Diamond
+{
+    public static void main(String args[]) 
+    {
+        int n, i, j, space = 1;
+        System.out.print("Enter the number of rows: ");
+        Scanner s = new Scanner(System.in);
+        n = s.nextInt();
+        space = n - 1;
+        for (j = 1; j <= n; j++) 
+        {
+            for (i = 1; i <= space; i++) 
+            {
+                System.out.print(" ");
+            }
+            space--;
+            for (i = 1; i <= 2 * j - 1; i++) 
+            {
+                System.out.print("*");                
+            }
+            System.out.println("");
+        }
+        space = 1;
+        for (j = 1; j <= n - 1; j++) 
+        {
+            for (i = 1; i <= space; i++) 
+            {
+                System.out.print(" ");
+            }
+            space++;
+            for (i = 1; i <= 2 * (n - j) - 1; i++) 
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+
+Program.7
+
+package Edureka;
+public class stringreverse {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+String str = "Welcome To Edureka";
+String[] strArray = str.split(" ");
+for (String temp: strArray){
+System.out.println(temp);
+}
+for(int i=0; i<3; i++){ char[] s1 = strArray[i].toCharArray(); for (int j = s1.length-1; j>=0; j--)
+{System.out.print(s1[j]);}
+System.out.print(" ");
+}
+}
+}
+
+
+Program.8
+
+public class GFG {
+ 
+
+    // Function that returns true if
+
+    // the array is mirror-inverse
+
+    static boolean isMirrorInverse(int arr[])
+
+    {
+
+        for (int i = 0; i < arr.length; i++) {
+ 
+
+            // If condition fails for any element
+
+            if (arr[arr[i]] != i)
+
+                return false;
+
+        }
+ 
+
+        // Given array is mirror-inverse
+
+        return true;
+
+    }
+ 
+
+    // Driver code
+
+    public static void main(String[] args)
+
+    {
+
+        int arr[] = { 1, 2, 3, 0 };
+
+        if (isMirrorInverse(arr))
+
+            System.out.println("Yes");
+
+        else
+
+            System.out.println("No");
+
+    }
+}
+
+
+Program.9
+
+import java.util.ArrayList;
+import java.util.List;
+ 
+// Main class
+public class GFG {
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Creating an object of List interface with
+        // reference to ArrayList
+        List<Integer> al = new ArrayList<>();
+ 
+        // Adding elements to ArrayList class
+        // using add() method
+        al.add(10);
+        al.add(20);
+        al.add(30);
+        al.add(1);
+        al.add(2);
+ 
+        // Printing the current ArrayList
+        System.out.println(al);
+ 
+        // This makes a call to remove(Object) and
+        // removes element 1
+        al.remove(new Integer(1));
+ 
+        // This makes a call to remove(Object) and
+        // removes element 2
+        al.remove(new Integer(2));
+ 
+        // Printing the modified ArrayList
+        System.out.println(al);
+    }
+}
+
+Program.10
+
+public class Transpose    
+{    
+    public static void main(String[] args) {    
+        int rows, cols;    
+            
+        //Initialize matrix a    
+          int a[][] = {    
+                          {1, 2, 3},    
+                          {4, 5, 6},    
+                          {7, 8, 9}    
+                       };    
+              
+          //Calculates number of rows and columns present in given matrix    
+          rows = a.length;    
+        cols = a[0].length;    
+            
+        //Declare array t with reverse dimensions    
+        int t[][] = new int[cols][rows];    
+            
+        //Calculates transpose of given matrix    
+        for(int i = 0; i < cols; i++){    
+            for(int j = 0; j < rows; j++){    
+                //Converts the row of original matrix into column of transposed matrix    
+                t[i][j] = a[j][i];    
+            }    
+        }    
+        
+        System.out.println("Transpose of given matrix: ");    
+        for(int i = 0; i < cols; i++){    
+            for(int j = 0; j < rows; j++){    
+               System.out.print(t[i][j] + " ");    
+            }    
+            System.out.println();    
+        }    
+    }    
+}
+
+
+
+
+
+
+
+
